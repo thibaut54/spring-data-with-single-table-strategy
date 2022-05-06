@@ -8,13 +8,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 
 @Entity
 @Getter
 @Setter
 @ToString
-public class MySuperEntity {
+public abstract class MySuperEntity extends AbstractAuditingEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 //	@SequenceGenerator(name = "mySeqGen", sequenceName = "mySeq", initialValue = 1, allocationSize = 100)

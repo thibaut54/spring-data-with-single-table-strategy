@@ -1,1 +1,0 @@
-# spring-data-with-single-table-strategy
