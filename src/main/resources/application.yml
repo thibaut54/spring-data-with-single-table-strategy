@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:/home/estvu/HOMEWARE/repository/single-table-strategy-poc;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: admin
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-admin-password: admin
+
+server:
+  port: 9090
