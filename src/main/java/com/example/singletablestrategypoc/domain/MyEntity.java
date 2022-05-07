@@ -25,11 +25,7 @@ import javax.persistence.Table;
 @Setter
 @Slf4j
 @ToString
-public class MyEntity extends MySuperEntity{
-
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-//    private Long id;
+public class MyEntity extends MySuperEntity {
 
 	private String name;
 }
