@@ -27,9 +27,5 @@ import javax.persistence.InheritanceType;
 @Accessors(chain = true)
 public class MyEntity extends MySuperEntity {
 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-//    private Long id;
-
 	private String name;
 }
