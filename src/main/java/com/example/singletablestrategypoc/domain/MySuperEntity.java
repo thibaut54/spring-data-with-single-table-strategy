@@ -3,20 +3,23 @@ package com.example.singletablestrategypoc.domain;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "my_super_entity")
 @Getter
 @Setter
 @ToString
+@Accessors(chain = true)
 public abstract class MySuperEntity extends AbstractAuditingEntity {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-//	@SequenceGenerator(name = "mySeqGen", sequenceName = "mySeq", initialValue = 1, allocationSize = 100)
-//	@GeneratedValue(generator = "mySeqGen")
 	private Long id;
 }

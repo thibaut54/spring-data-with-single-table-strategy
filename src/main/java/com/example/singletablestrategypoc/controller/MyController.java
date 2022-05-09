@@ -1,8 +1,6 @@
 package com.example.singletablestrategypoc.controller;
 
 import com.example.singletablestrategypoc.domain.MyEntity;
-import com.example.singletablestrategypoc.domain.MyEntityA;
-import com.example.singletablestrategypoc.domain.MyEntityDefault;
 import com.example.singletablestrategypoc.service.MyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,21 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class MyController {
 
-	private final MyService myService;
-
-//	@GetMapping(value = "entity/{id}")
-//	public String get(@PathVariable Long id){
-//		return myService.getById(id).getName();
-//	}
+	private final MyService<MyEntity> myService;
 
 	@GetMapping(value = "entity/default/{id}")
 	public String getEntityDefaultById(@PathVariable Long id){
-		return myService.getEntityDefaultById(id, MyEntityDefault.class).getName();
+		return myService.getEntityDefaultById(id, MyEntity.class).getName();
 	}
 
 	@GetMapping(value = "entity/A/{id}")
 	public String getEntityAById(@PathVariable Long id){
-		return myService.getEntityAById(id, MyEntityA.class).getName();
+		return myService.getEntityAById(id, MyEntity.class).getName();
 	}
 
 	@GetMapping(value = "entity/root/{id}")
